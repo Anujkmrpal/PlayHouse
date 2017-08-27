@@ -1,0 +1,412 @@
+/*
+
+style of index.html
+
+
+*/
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    margin: 0px;
+    background-image: url("../images/home/bg.jpg");
+    background-repeat: no-repeat;
+    /*    background-color: #101012;*/
+    background-color: white;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+#loader {
+    z-index: 10;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background: rgba(207, 0, 15, 0.4);
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+#div1 {
+    width: 40%;
+    margin: 230px 0px 0px 36.5%;
+    height: 300px;
+}
+
+#div1 #innerdiv {
+    animation: spin 4s infinite;
+    animation-timing-function: linear;
+    width: 58%;
+    margin-left: 13px;
+}
+
+#img1 {
+    width: 80px;
+    height: 80px;
+}
+
+#earthimg img {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 175px;
+    left: 42%;
+}
+
+#wrapper {
+    display: none;
+}
+
+#header {
+    background-color: #003F60;
+    /*    background: rgba(255, 255, 255, 0.2);*/
+    padding: 25px;
+    margin-bottom: 0px;
+    position: relative;
+    box-shadow: 0px 2px 3px white;
+    height: 90px;
+    overflow: hidden;
+}
+
+#header h1 {
+    text-align: center;
+    z-index: 2;
+    width: 50%;
+    font-family: 'Cinzel', serif;
+    font-weight: bolder;
+    /*    border: 1px solid black;*/
+    color: yellowgreen;
+    font-size: 44px;
+    position: absolute;
+    text-shadow: 5px -5px 4px black;
+    top: 50%;
+    left: 25%;
+}
+
+
+/*Animation of header image*/
+
+@keyframes headimage {
+    0% {
+        top: 0%;
+        left: -10%;
+    }
+    100% {
+        top: 0%;
+        left: 100%;
+    }
+}
+
+#header .headgif {
+    /*    border: 1px solid;*/
+    position: absolute;
+    z-index: 0;
+    top: 0%;
+    height: 90px;
+    width: 120px;
+    animation: headimage 15s infinite linear;
+}
+
+#content {
+    padding: 0px auto;
+    text-align: center;
+    width: 100%;
+    margin: 0px auto;
+    overflow: hidden;
+    background: rgba( 244, 244, 244, 0.3);
+}
+
+#content ul {
+    /*    justify-content: space-around;*/
+    padding: 0px auto;
+    margin: 40px 0px;
+}
+
+.set1,
+.set2 {
+    margin-bottom: 40px;
+    position: relative;
+    min-height: 300px;
+}
+
+.image a img {
+    width: 350px;
+    height: 300px;
+}
+
+.set1 .image {
+    display: inline-block;
+    position: absolute;
+    left: 25%;
+}
+
+.set2 .image {
+    display: inline-block;
+    position: absolute;
+    left: 50.9%;
+}
+
+.set2 .details,
+.set1 .details {
+    width: 350px;
+    height: 250px;
+    /*    border: 2px solid black;*/
+    top: 8%;
+    position: absolute;
+    background: rgba(233, 230, 200, 0.7);
+    padding: 40px;
+    text-transform: capitalize;
+    box-shadow: 0 0 100px #005500 inset;
+}
+
+.set1 .details {
+    left: 50.9%;
+}
+
+.set2 .details {
+    left: 25%;
+}
+
+.details h5 {
+    text-align: left;
+}
+
+.details p {
+    text-align: left;
+}
+
+.details ul {
+    padding: 0px;
+    margin: 0px !important;
+}
+
+.details ul li {
+    text-align: left;
+    list-style: square;
+}
+
+#footer {
+    width: 100%;
+    background-color: #003F60;
+    padding: 20px;
+    display: flex;
+    box-shadow: 0px -2px 3px white;
+}
+
+#footer h2 {
+    color: white;
+    width: 48%;
+    font-size: 12px;
+}
+
+#footer h2:first-child {
+    /*    text-align: center;*/
+}
+
+#footer h2:last-child {
+    text-align: right;
+}
+
+
+/*Animation*/
+
+
+/*
+@keyframes movement {
+    from {
+        transform: scale(1, 1);
+    }
+    to {
+        transform: scale(1.1, 1.1);
+    }
+}
+*/
+
+#content ul li:hover img {
+    /*    animation: movement 0.9s;*/
+    transform: scale(1.05, 1.05);
+    box-shadow: 8px 10px 20px black;
+    position: absolute;
+    left: 0px;
+    z-index: 4;
+}
+
+#content ul li:hover #game1info {
+    display: block;
+    z-index: 5;
+    /*top:25%;*/
+    left: 25%;
+    transition: 5s;
+}
+
+@keyframes ghost1Move {
+    from {
+        top: 150PX;
+        left: 0%;
+    }
+    to {
+        top: 150PX;
+        left: 95%;
+    }
+}
+
+.ghost1 {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 150px;
+    left: 0%;
+    /*    z-index: -1;*/
+    animation: ghost1Move 19s infinite linear;
+}
+
+@keyframes ghost2Move {
+    from {
+        top: 250PX;
+        left: 0%;
+    }
+    to {
+        top: 250PX;
+        left: 95%;
+    }
+}
+
+.ghost2 {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 250px;
+    left: 0%;
+    /*    z-index: -1;*/
+    animation: ghost2Move 19s infinite ease-in;
+}
+
+@keyframes ghost3Move {
+    from {
+        top: 350PX;
+        left: -5%;
+    }
+    to {
+        top: 350PX;
+        left: 100%;
+    }
+}
+
+.ghost3 {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    z-index: 1;
+    top: 350px;
+    left: 0%;
+    /*    z-index: -1;*/
+    animation: ghost3Move 16s infinite linear;
+}
+
+@keyframes ghost4Move {
+    from {
+        top: 450PX;
+        left: 0%;
+    }
+    to {
+        top: 450PX;
+        left: 95%;
+    }
+}
+
+.ghost4 {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 450px;
+    left: 0%;
+    /*    z-index: -1;*/
+    animation: ghost4Move 18s infinite ease;
+}
+
+@keyframes ghost5Move {
+    from {
+        top: 550PX;
+        left: 0%;
+    }
+    to {
+        top: 550PX;
+        left: 95%;
+    }
+}
+
+.ghost5 {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 550px;
+    left: 0%;
+    /*    z-index: -1;*/
+    animation: ghost5Move 15s infinite ease-in-out;
+}
+
+.ufo img {
+    height: 60px;
+    width: 60px;
+    margin-right: 200px;
+}
+
+.ufo {
+    position: absolute;
+    z-index: -1;
+    top: 10%;
+    right: 3%;
+    animation: ufoMove 17s infinite linear;
+}
+
+@keyframes ufoMove {
+    from {
+        top: 2%;
+    }
+    to {
+        top: 90%;
+    }
+}
+
+#game1info {
+    position: absolute;
+    border: 1px solid;
+    top: 25%;
+    left: -25%;
+    color: white;
+    display: none;
+}
+
+#dev {
+    font-size: 14px;
+}
+
+.details ul li {
+    margin: 10px 0px;
+    font-family: 'Inconsolata', monospace;
+}
+
+.details h4 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #406098;
+    font-family: 'Inconsolata', monospace;
+}
+
+.details h5 {
+    font-size: 18px;
+    font-family: 'Inconsolata', monospace;
+}

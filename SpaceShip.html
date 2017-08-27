@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Space Ship Game</title>
+    <link rel="stylesheet" href="assets/CSS/main.css">
+    <script src="assets/js/myjs/jquery-3.2.1.min.js"></script>
+    <script>
+        $(window).on("load", function () {
+            $("#loader").css("display", "none");
+            $("#gameWindow").css("display", "block");
+        })
+    </script>
+</head>
+
+<body>
+    <div id="loader"> <img src="assets/images/loader.gif" alt="loader"> </div>
+    <div id="gameWindow"> </div>
+    <script src="assets/libs/p5.min.js"></script>
+    <script src="assets/libs/p5.dom.min.js"></script>
+    <script src="assets/libs/p5.sound.min.js"></script>
+    <script src="assets/js/SpaceShip/rocket.js"></script>
+    <script src="assets/js/SpaceShip/missile.js"></script>
+    <script src="assets/js/SpaceShip/targat.js"></script>
+    <script src="assets/js/SpaceShip/gamelauncher.js"></script>
+    <style>
+        #gameWindow {
+            width: 1100px;
+            height: 620px;
+            margin: auto;
+        }
+    </style>
+</body>
+
+</html>

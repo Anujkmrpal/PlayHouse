@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ping Pong</title>
+    <link rel="stylesheet" href="assets/CSS/main.css">
+    <script src="assets/js/myjs/jquery-3.2.1.min.js"></script>
+    <script>
+        $(window).on("load", function () {
+            $("#loader").css("display", "none");
+            $("#gameWindow").css("display", "block");
+        })
+    </script>
+</head>
+
+<body>
+    <div id="loader"> <img src="assets/images/loader.gif" alt="loader"> </div>
+    <div id="gameWindow"> </div>
+    <style>
+        #gameWindow {
+            margin: auto;
+            height: 580px;
+            width: 680px;
+            background-color: white;
+        }
+    </style>
+    <script src="assets/libs/p5.min.js"></script>
+    <script src="assets/js/PingPong/paddle.js"></script>
+    <script src="assets/js/PingPong/Ball.js"></script>
+    <script src="assets/js/PingPong/gamelauncher.js"></script>
+</body>
+
+</html>
